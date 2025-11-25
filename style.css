@@ -1,0 +1,11 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.result-card {
+    min-height: 190px;
+}
+
+textarea[readonly] {
+    background-color: #f8f9fa;
+}

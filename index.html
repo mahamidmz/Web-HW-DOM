@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web-HW-DOM + Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1 class="mb-4 text-center">תרגיל בית – HTML DOM + BOOTSTRAP</h1>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        טופס חישוב
+                    </div>
+                    <div class="card-body">
+                        <form id="calcForm" novalidate>
+                            <div class="row g-3">
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="firstNumber" class="form-label">מספר ראשון</label>
+                                    <input type="text" class="form-control" id="firstNumber" required>
+                                    <div class="invalid-feedback">נא להזין מספר ראשון תקין</div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="secondNumber" class="form-label">מספר שני</label>
+                                    <input type="text" class="form-control" id="secondNumber" required>
+                                    <div class="invalid-feedback">נא להזין מספר שני תקין</div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="operation" class="form-label">פעולה</label>
+                                    <select id="operation" class="form-select" required>
+                                        <option value="" disabled selected>בחר פעולה</option>
+                                        <option value="add">חיבור (+)</option>
+                                        <option value="sub">חיסור (−)</option>
+                                        <option value="mul">כפל (×)</option>
+                                        <option value="div">חילוק (÷)</option>
+                                    </select>
+                                    <div class="invalid-feedback">נא לבחור פעולה</div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-success w-100">
+                                        =
+                                    </button>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="result" class="form-label">תוצאה</label>
+                                    <input type="text" id="result" class="form-control" readonly>
+                                    <div id="resultFeedback" class="invalid-feedback">
+                                        שגיאה בחישוב
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-10 col-lg-6">
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-dark text-white">
+                        טבלה
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-0 text-center" id="logTable">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th scope="col">מספר ראשון</th>
+                                        <th scope="col">מספר שני</th>
+                                        <th scope="col">פעולה</th>
+                                        <th scope="col">תוצאה</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card result-card shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        תצוגה – לוגים
+                    </div>
+                    <div class="card-body">
+                        <textarea id="logTextarea" class="form-control" rows="5" readonly
+                            placeholder="Textarea לוגים - כאן יוצגו כל הפעולות לפי הסדר..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
